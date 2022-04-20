@@ -23,7 +23,7 @@
     <br>
     <input type="text" id="fname" nom="fname" required placeholder="Ingrese sunombre"><br>
     <label for="edad">Edad: </label><br>
-    <input type="number" name="edad" required min="18" placeholder="Ingrese su edad"><br>
+    <input type="number" name="edad" required min="18" max="105" placeholder="Ingrese su edad"><br>
     <label for="email">Correo electronico:</label><br>
     <input type="email" name="email" required placeholder="Ingrese su edad"><br> 
     <br>
@@ -44,37 +44,55 @@
         
     </select>
 </p>
+<p>
+    <label for="-Tipo de Mascota-">
+        <h3>
+            Tipo de Mascota
+        </h3>
+    </label>
+    <select name="-Tipo de Mascota-" id="s2">
+        <option value="">--Tipo de Mascota--</option>
+        <option value="1">Gato</option>
+        <option value="2">Perro</option>
+        <option value="3">Hamster</option>
+        <option value="4">Raton</option>
+        <option value="5">Serpiente</option>
+        <option value="6">Ave</option>
+        <option value="7">Caballo</option>
+        <option value="8">Elefante</option>
+        <option value="9">Leon</option>
+
+    </select>
+    <br>
+
+    <p>Sexo de Mascota:</p>
+    <input type="radio" id="ge1" name="genero">
+    <label for="ge1">Macho</label>
+    <input type="radio" id="ge2" name="genero">
+    <label for="ge2">Hembra</label>
+
+    <br>
+</p>
     <label for="" ><h3>Tipo de Producto</h3></label>
     <br>
-    <input type="checkbox" id="pa" name="pa1">
-    <label for="BAND1"> LINK IN PARK</label><br>
+    <input type="checkbox" id="pa1" name="pa1">
+    <label for="pa1"> CAMA DE PERRO</label><br>
     <input type="checkbox" id="pa2" name="pa2">
-    <label for="BAND2">THE PEPES</label><br>
+    <label for="pa2"> SHAMPOO PARA GATOS</label><br>
     <input type="checkbox" id="pa3" name="pa3">
-    <label for="BAND3"> LOS MOX</label><br><br>
+    <label for="pa3"> COMIDA DE GATO</label><br><br>
 
     
 
-    <br>
-
-    <p>Gérnero:</p>
-    <input type="radio" id="ge1" name="genero">
-    <label for="ge1">HOMBRE</label>
-    <input type="radio" id="ge2" name="genero">
-    <label for="ge2">MUJER</label>
-    <input type="radio" id="ge3" name="genero">
-    <label for="ge3">NO BINARIE</label>
-
-    <br>
     <p>
-    <textarea id="a" cols="100" rows="10" placeholder="Comentario adicionales..." minlength="10"></textarea>
+    <textarea id="a" cols="100" rows="10" placeholder="Comentario adicionales..." minlength="50"></textarea>
     </p>
     <p>
     <script>
         function borrar1(){
-            document.getElementById("a").value= '';
+            document.getElementById("a").value='';
         }
-    </script>    
+    </script>
     <input onclick="borrar1()" type="button"id="a" value="Borrar ">
     </p>
 
