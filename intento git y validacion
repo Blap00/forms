@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1 style="text-align: center;">    
+        Solicitud de Cotizaci&oacuten
+    </h1>
+    <fieldset>
+    <form action="">
+    <label for="nom">
+        Nombre:
+    </label>
+    <br>
+    <input type="text" id="fname" nom="fname" required placeholder="Ingrese sunombre">
+    <br>
+    <label for="nom">Apellido:
+    </label>
+    <br>
+    <input type="text" id="fname" nom="fname" required placeholder="Ingrese sunombre"><br>
+    <label for="edad">Edad: </label><br>
+    <input type="number" name="edad" required min="18" max="105" placeholder="Ingrese su edad"><br>
+    <label for="email">Correo electronico:</label> <br>
+    <input type="email" name="email" required placeholder="Ingrese su edad"><br> 
+    <input type="button" class="btn btn-success" value="Validar Email" onclick="ValidarEmail(form.email.value)">
+    <br>
+    <script>
+        function ValidarEmail (email)
+        var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var esValido= expReg.test (email);
+        if(esValido=true) {
+            alert ('El correo es valido')
+        }
+        else {
+            alert ('El correo NO es valido')
+        }
+
+    </script>
+    <p>
+    <label for="-Nacionalidad-" >
+        <h3>
+            Nacionalidad
+        </h3>
+    </label>
+    <select name="-Nacionalidad-" required id="S1"> 
+        <option value="">--Nacionalidad--</option>
+        <option value="1">Argentina</option>
+        <option value="2">Boliviano</option>
+        <option value="3">Chilena</option>
+        <option value="4">Chino</option>
+        <option value="5">Peruano</option>
+        <option value="6">Venezolano</option>
+        
+    </select>
+</p>
+<p>
+    <label for="-Tipo de Mascota-">
+        <h3>
+            Tipo de Mascota
+        </h3>
+    </label>
+    <select name="-Tipo de Mascota-" id="s2">
+        <option value="">--Tipo de Mascota--</option>
+        <option value="1">Gato</option>
+        <option value="2">Perro</option>
+        <option value="3">Hamster</option>
+        <option value="4">Raton</option>
+        <option value="5">Serpiente</option>
+        <option value="6">Ave</option>
+        <option value="7">Caballo</option>
+        <option value="8">Elefante</option>
+        <option value="9">Leon</option>
+
+    </select>
+    <br>
+
+    <p>Sexo de Mascota:</p>
+    <input type="radio" id="ge1" name="genero">
+    <label for="ge1">Macho</label>
+    <input type="radio" id="ge2" name="genero">
+    <label for="ge2">Hembra</label>
+
+    <br>
+</p>
+    <label for="" ><h3>Tipo de Producto</h3></label>
+    <br>
+    <input type="checkbox" id="pa1" name="pa1">
+    <label for="pa1"> CAMA DE PERRO</label><br>
+    <input type="checkbox" id="pa2" name="pa2">
+    <label for="pa2"> SHAMPOO PARA GATOS</label><br>
+    <input type="checkbox" id="pa3" name="pa3">
+    <label for="pa3"> COMIDA DE GATO</label><br><br>
+
+    
+
+    <p>
+    <textarea id="a" cols="100" rows="10" placeholder="Comentario adicionales..." minlength="50"></textarea>
+    </p>
+    <p>
+    <script>
+        function borrar1(){
+            document.getElementById("a").value='';
+        }
+    </script>
+    <input onclick="borrar1()" type="button"id="a" value="Borrar ">
+    </p>
+
+    <br>
+
+    <input type="submit" value="Eviar">
+    <input type="reset" value="Limpiar">
+    </form>
+</fieldset>
+</body>
+</html>
